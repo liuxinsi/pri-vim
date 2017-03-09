@@ -16,6 +16,7 @@ set fileencodings=ucs-bom,utf-8,cp936,gb18030,big5,euc-jp,euc-kr,latin1  "使用
 set hls                     "检索时高亮显示匹配项
 set helplang=cn             "帮助系统设置为中文
 set foldmethod=syntax       "代码折叠
+set foldlevelstart=99
 
 
 "新建的tab ctrl+h,ctrl+l 可以左右切换
@@ -39,7 +40,11 @@ let Tlist_GainFocus_On_ToggleOpen = 1  "打开taglist时，光标保留在taglis
 let Tlist_Ctags_Cmd='/opt/local/bin/ctags'  "设置ctags命令的位置
 nnoremap <leader>tl : Tlist<CR>
 
+colorscheme molokai
 
+let g:vim_markdown_frontmatter=1
+
+filetype plugin indent on
 
 "插件管理
 execute pathogen#infect()
